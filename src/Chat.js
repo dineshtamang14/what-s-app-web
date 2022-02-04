@@ -1,5 +1,7 @@
 import React from 'react';
 import "./Chat.css";
+import MicIcon from "@material-ui/icons/Mic";
+import InsertEmoticonIcon from "@material-ui/icons/InsertEmoticon"
 import { Avatar, IconButton } from "@material-ui/core"
 import { AttachFile, MoreVert, SearchOutlined } from "@material-ui/icons"
 
@@ -23,6 +25,36 @@ function Chat() {
           <MoreVert />
         </IconButton>
       </div>
+    </div>
+
+    <div className="chat__body">
+      <p className="chat__message">
+        <span className="chat__name">Dinesh</span> this is the message
+        <span className="chat__timestamp">{new Date().toUTCString()}</span>
+      </p>
+
+      <p className="chat__message chat__reciever">
+        <span className="chat__name">Dinesh</span> this is the message 
+        <span className="chat__timestamp">{new Date().toUTCString()}</span>
+      </p>
+    </div>
+
+    <div className="chat__footer">
+      <InsertEmoticonIcon />
+      <form>
+        <input 
+          //value={input}
+          //onChange={(e) => setInput(e.target.value)}
+          placeholder="Type a message"
+          type="text"
+        />
+        <button 
+        //onClick={sendMessage}
+        type="submit">
+          Send a message 
+        </button>
+      </form>
+      <MicIcon />
     </div>
   </div>;
 }
