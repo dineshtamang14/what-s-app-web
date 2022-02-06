@@ -13,7 +13,7 @@ function App() {
       .then(response => {
         setMessages(response.data);
       })
-  }, []);
+  });
 
   useEffect(() => {
     const pusher = new Pusher('a8a64b2d8bf882de2893', {
